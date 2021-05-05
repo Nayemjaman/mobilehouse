@@ -1,5 +1,4 @@
 import scrapy
-import itertools
 import unicodedata
 def cfDecodeEmail(encodedString):                       
     r = int(encodedString[:2],16)
