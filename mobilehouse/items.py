@@ -6,7 +6,15 @@
 import scrapy
 
 
-class MobilehouseItem(scrapy.Item):
+class MobileHouseItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    Name = scrapy.Field()
+    Brand = scrapy.Field()
+    Price = scrapy.Field()
+    Video = scrapy.Field()
+    USB = scrapy.Field()
+    WiFi = scrapy.Field()
+    Speed = scrapy.Field()
+    Ram = scrapy.Field()
+    Bluetooth = scrapy.Field()
+
