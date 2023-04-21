@@ -1,4 +1,4 @@
-# Scrapy settings for mobilehouse project
+# Scrapy settings for phonehousebd project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,21 +7,20 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'mobilehouse'
+BOT_NAME = 'phonehousebd'
 
-SPIDER_MODULES = ['mobilehouse.spiders']
-NEWSPIDER_MODULE = 'mobilehouse.spiders'
+SPIDER_MODULES = ['phonehousebd.spiders']
+NEWSPIDER_MODULE = 'phonehousebd.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'mobilehouse (+http://www.yourdomain.com)'
-USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1"
+#USER_AGENT = 'phonehousebd (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -35,7 +34,7 @@ ROBOTSTXT_OBEY = True
 #COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
-TELNETCONSOLE_ENABLED = False
+#TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 #DEFAULT_REQUEST_HEADERS = {
@@ -46,14 +45,15 @@ TELNETCONSOLE_ENABLED = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'mobilehouse.middlewares.MobilehouseSpiderMiddleware': 543,
+#    'phonehousebd.middlewares.PhonehousebdSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'mobilehouse.middlewares.MobilehouseDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -64,9 +64,13 @@ TELNETCONSOLE_ENABLED = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 # ITEM_PIPELINES = {
-#    'mobilehouse.pipelines.MobilehousePipeline': 300,
+#    'phonehousebd.pipelines.PhonehousebdPipeline': 300,
 # }
-
+# POSTGRES_HOST = 'localhost'
+# POSTGRES_DATABASE = 'gsmbdphones'
+# POSTGRES_USER = 'postgres'
+# POSTGRES_PASSWORD = 'admin'
+# POSTGRES_TABLE = 'phones'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
