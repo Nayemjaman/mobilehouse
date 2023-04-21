@@ -63,14 +63,14 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'phonehousebd.pipelines.PhonehousebdPipeline': 300,
-# }
-# POSTGRES_HOST = 'localhost'
-# POSTGRES_DATABASE = 'gsmbdphones'
-# POSTGRES_USER = 'postgres'
-# POSTGRES_PASSWORD = 'admin'
-# POSTGRES_TABLE = 'phones'
+ITEM_PIPELINES = {
+   'phonehousebd.pipelines.PhonehousebdPipeline': 300,
+}
+POSTGRES_HOST = 'localhost'
+POSTGRES_DATABASE = 'gsmbdphones'
+POSTGRES_USER = 'postgres'
+POSTGRES_PASSWORD = 'admin'
+POSTGRES_TABLE = 'phones'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
