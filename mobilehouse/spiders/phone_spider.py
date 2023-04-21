@@ -19,8 +19,7 @@ class PhoneSpiderSpider(scrapy.Spider):
 
     def parse(self, response):
         brand_links = response.css('.col-md-6 a::attr(href)').extract()
-        # yield from response.follow_all(brand_links, self.parse_mobiles)
-        yield from response.follow_all(['https://www.gsmarena.com.bd/asus/'], self.parse_mobiles) 
+        yield from response.follow_all(brand_links, self.parse_mobiles)
 
     def parse_mobiles(self, response): 
         yield from response.follow_all(response.css('.product-thumb a::attr(href)').extract(), self.parse_mobile_details)
