@@ -9,9 +9,9 @@ Gsm_arena_bd_parser with Scrapy
 
 </hr>
 
-Welcome to the Gsm_arena_bd_parser repository!
+Welcome to the GSM_arena_bd_parser repository!
 
-In this project, I scraped news data (from [gsmarena.com.bd](https://www.gsmarena.com.bd/)) using Scrapy and make a pipeline to push data in PostgreSQL database.
+In this project, I scraped mobile phone data (from [gsmarena.com.bd](https://www.gsmarena.com.bd/)) using Scrapy and make a pipeline to push data in the PostgreSQL database.
 
 
-**More than 1800+ mobile phone's data.**
+**More than 1800+ mobile phone data.**
